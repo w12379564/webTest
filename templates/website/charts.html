@@ -1,18 +1,22 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
 
+		{%block charts_active%}
+		active
+		{%endblock charts_active%}
+
 		<!-- MAIN -->
 		{% block main %}
 		<div class="main">
 			<!-- MAIN CONTENT -->
 			<div class="main-content">
 				<div class="container-fluid">
-					<h3 class="page-title">Charts</h3>
+					<h3 class="page-title">图表</h3>
 					<div class="row">
 						<div class="col-md-6">
 							<div class="panel">
 								<div class="panel-heading">
-									<h3 class="panel-title">Line Chart</h3>
+									<h3 class="panel-title">折线图</h3>
 								</div>
 								<div class="panel-body">
 									<div id="demo-line-chart" class="ct-chart"></div>
@@ -22,7 +26,7 @@
 						<div class="col-md-6">
 							<div class="panel">
 								<div class="panel-heading">
-									<h3 class="panel-title">Bar Chart</h3>
+									<h3 class="panel-title">柱状图</h3>
 								</div>
 								<div class="panel-body">
 									<div id="demo-bar-chart" class="ct-chart"></div>
@@ -34,7 +38,7 @@
 						<div class="col-md-6">
 							<div class="panel">
 								<div class="panel-heading">
-									<h3 class="panel-title">Area Chart</h3>
+									<h3 class="panel-title">面积图</h3>
 								</div>
 								<div class="panel-body">
 									<div id="demo-area-chart" class="ct-chart"></div>
@@ -44,7 +48,7 @@
 						<div class="col-md-6">
 							<div class="panel">
 								<div class="panel-heading">
-									<h3 class="panel-title">Multiple Chart</h3>
+									<h3 class="panel-title">混合图</h3>
 								</div>
 								<div class="panel-body">
 									<div id="multiple-chart" class="ct-chart"></div>
