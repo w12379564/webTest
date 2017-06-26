@@ -7,3 +7,9 @@ def index(request):
                       'title': '命运石之门的选择', 
                       'welcome': 'Welcome to Steins;Gate'
                   })
+
+def charts(request):
+    return render(request, 'website/charts.html')
+
+def tables(request):
+    return render(request, 'website/tables.html')
