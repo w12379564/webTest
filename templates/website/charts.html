@@ -12,6 +12,7 @@
 			<div class="main-content">
 				<div class="container-fluid">
 					<h3 class="page-title">图表</h3>
+					<button type="button" class="btn btn-default" id="search">查询</button>
 					<div class="row">
 						<div class="col-md-6">
 							<div class="panel">
@@ -43,18 +44,25 @@
 				[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
 			]
 		};
+			
 
 		// line chart
 		options = {
 			height: "300px",
 			showPoint: true,
 			axisX: {
-				showGrid: false
+				showGrid: true
 			},
 			lineSmooth: false,
 		};
+		
 
-		new Chartist.Line('#demo-line-chart', data, options);
+		var chart=new Chartist.Line('.ct-chart', data);
+		
+		$("#search").click(function(){
+			data.series=[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+			chart.update(data);
+		});
 
 	});
 	</script>
