@@ -50,18 +50,19 @@
 		options = {
 			height: "300px",
 			showPoint: true,
-			axisX: {
-				showGrid: true
-			},
-			lineSmooth: false,
 		};
 		
 
 		var chart=new Chartist.Line('.ct-chart', data);
 		
 		$("#search").click(function(){
-			data.series=[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+			$.getJSON('/search_ajax/',function(ret){
+			for(var i=0;i<ret.length;i++)
+			{
+				data.series[0][i]=ret[i];
+			}
 			chart.update(data);
+			});
 		});
 
 	});

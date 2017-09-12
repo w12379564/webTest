@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from django.http import JsonResponse
 
 # Create your views here.
 def index(request):
@@ -13,3 +14,7 @@ def charts(request):
 
 def tables(request):
     return render(request, 'website/tables.html')
+
+def search_ajax(request):
+    ret=[12,11,10,9,8,7,6,5,4,3,2,1]
+    return JsonResponse(ret,safe=False)
