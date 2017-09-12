@@ -56,7 +56,7 @@
 		var chart=new Chartist.Line('.ct-chart', data);
 		
 		$("#search").click(function(){
-			$.getJSON('/search_ajax/',function(ret){
+			$.getJSON("{% url 'search_ajax' %}",function(ret){
 			for(var i=0;i<ret.length;i++)
 			{
 				data.series[0][i]=ret[i];
